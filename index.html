@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" class="uib-framework-theme">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+        <script type="text/javascript">
+            (function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.492#p=toshibaxmk4055gsx_89clt54ntxx89clt54nt";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();
+        </script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="uib-header container-group inner-element uib_w_1 header-bg" data-uib="layout/header" data-ver="0">
+                    <h2 style="color:white">My Cook Book</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col" id="page_19_27">
+                    <button class="btn widget uib_w_20 d-margins btn-lg btn-link" data-uib="twitter%20bootstrap/button" data-ver="1">My Favorite recipes <i class="glyphicon glyphicon-heart button-icon-right" data-position="right"></i>
+                    </button>
+
+                    <div class="list-group widget uib_w_2 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                        <a class="list-group-item allow-badge widget uib_w_3" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge glyphicon glyphicon-star-empty"> </span>
+                            <h4 class="list-group-item-heading">Pancakes</h4>
+
+                            <p class="list-group-item-text">Time : 30 Mins</p>
+                        </a>
+                        <a class="list-group-item allow-badge widget uib_w_4" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge glyphicon glyphicon-star-empty"> </span>
+
+                            <h4 class="list-group-item-heading">Lasagne</h4>
+                            <p class="list-group-item-text">Time : 1 Hours</p>
+                        </a>
+                        <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge glyphicon glyphicon-star-empty"> </span>
+
+                            <h4 class="list-group-item-heading">Roast Chicken</h4>
+                            <p class="list-group-item-text">Time : 1 Hour</p>
+                        </a>
+                        <a class="list-group-item allow-badge widget uib_w_8" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge glyphicon glyphicon-star-empty"> </span>
+                            <h4 class="list-group-item-heading">Noodles</h4>
+                            <p class="list-group-item-text">Time : 2 Mins</p>
+                        </a>
+                        <a class="list-group-item allow-badge widget uib_w_9" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge glyphicon glyphicon-star-empty"> </span>
+
+                            <h4 class="list-group-item-heading">Vegetable Soup</h4>
+                            <p class="list-group-item-text">Time : 20 Mins</p>
+                        </a>
+                        <a class="list-group-item allow-badge widget uib_w_5" data-uib="twitter%20bootstrap/list_item" data-ver="1"><span class="badge glyphicon glyphicon-star-empty"> </span>
+
+                            <h4 class="list-group-item-heading">Vanilla Cake</h4>
+                            <p class="list-group-item-text">Time : 1.5 Hours</p>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_15" data-uib="layout/footer" data-ver="0">
+                    <h2 style="color: white;">©Rayyan's Cook Book</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="upage hidden" id="uib_page_pancakes">
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_11" data-uib="layout/header" data-ver="0">
+                    <h2 style="color:white">Pancake Recipe</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_38_72">
+                    <div class="widget uib_w_12 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/pancake.png" alt="placeholder for pancake">
+
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="tarea widget uib_w_13 d-margins" data-uib="media/text" data-ver="0" name="uib_w_13">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h1>Ingredients :&nbsp;</h1>
+
+                            <ul>
+                                <li>1 1/2 cups all-purpose flour</li>
+                                <li>3 1/2 teaspoons baking powder</li>
+                                <li>1 teaspoon salt</li>
+                                <li>1 tablespoon white sugar</li>
+                                <li>1 1/4 cups milk</li>
+                                <li>1 egg</li>
+                                <li>3 tablespoons butter, melted</li>
+                            </ul>
+
+                            <h2>Instructions - Recipe</h2>
+
+                            <p><strong>1</strong>.In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.</p>
+
+                            <p><strong>2</strong>.Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
+
+                            <p><strong>3</strong>.Enjoy!</p>
+
+                            <h3><em><strong>Tip</strong></em></h3>
+
+                            <p><strong><em>Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.​</em></strong>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn widget uib_w_19 d-margins btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1">I made it! <i class="glyphicon glyphicon-ok button-icon-right" data-position="right"></i>
+                    </button>
+                    <button class="btn widget uib_w_14 d-margins btn-lg btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1" id="backbuttonpancake"><i class="glyphicon glyphicon-arrow-left button-icon-left" data-position="left"></i>Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="upage hidden" id="uib_page_1lasagne">
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_16" data-uib="layout/header" data-ver="0">
+                    <h2 style="color:white;">Lasagne Recipe</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col" id="page_83_59">
+                    <div class="widget uib_w_17 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/lasagne.png" alt="Lasagne">
+
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="tarea widget uib_w_18 d-margins" data-uib="media/text" data-ver="0" name="uib_w_18">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h1>Ingredients :&nbsp;</h1>
+
+                            <ul>
+                                <li>1 pound sweet Italian sausage</li>
+                                <li>3/4 pound lean ground beef</li>
+                                <li>1/2 cup minced onion</li>
+                                <li>2 cloves garlic, crushed</li>
+                                <li>1 (28 ounce) can crushed tomatoes</li>
+                                <li>2 (6 ounce) cans tomato paste</li>
+                                <li>2 (6.5 ounce) cans canned tomato sauce</li>
+                                <li>1/2 cup water</li>
+                                <li>2 tablespoons white sugar</li>
+                                <li>1 1/2 teaspoons dried basil leaves</li>
+                                <li>1/2 teaspoon fennel seeds</li>
+                                <li>1 teaspoon Italian seasoning</li>
+                                <li>1 tablespoon salt</li>
+                                <li>1/4 teaspoon ground black pepper</li>
+                                <li>4 tablespoons chopped fresh parsley</li>
+                                <li>12 lasagna noodles</li>
+                                <li>16 ounces ricotta cheese</li>
+                                <li>1 egg</li>
+                                <li>1/2 teaspoon salt</li>
+                                <li>3/4 pound mozzarella cheese, sliced</li>
+                                <li>3/4 cup grated Parmesan cheese</li>
+                            </ul>
+
+                            <h2>Instructions - Recipe</h2>
+
+                            <p><strong>1</strong>. In a Dutch oven, cook sausage, ground beef, onion, and garlic over medium heat until well browned. Stir in crushed tomatoes, tomato paste, tomato sauce, and water. Season with sugar, basil, fennel seeds,
+                                Italian seasoning, 1 tablespoon salt, pepper, and 2 tablespoons parsley. Simmer, covered, for about 1 1/2 hours, stirring occasionally.</p>
+
+                            <p><strong>2</strong>.Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water. In a mixing bowl, combine ricotta cheese with egg,
+                                remaining parsley, and 1/2 teaspoon salt.</p>
+
+                            <p><strong>3</strong>.Preheat oven to 375 degrees F (190 degrees C).</p>
+
+                            <p><strong>4</strong>.To assemble, spread 1 1/2 cups of meat sauce in the bottom of a 9x13 inch baking dish. Arrange 6 noodles lengthwise over meat sauce. Spread with one half of the ricotta cheese mixture. Top with a third of
+                                mozzarella cheese slices. Spoon 1 1/2 cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese. Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking,
+                                either spray foil with cooking spray, or make sure the foil does not touch the cheese.</p>
+
+                            <p><strong>5</strong>.Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 minutes. Cool for 15 minutes before serving.</p>
+
+                            <p><strong>6</strong>.Enjoy!</p>
+                        </div>
+                    </div>
+                    <button class="btn widget uib_w_22 d-margins btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1">I made it!<i class="glyphicon glyphicon-ok button-icon-right" data-position="right"></i>
+                    </button>
+                    <button class="btn widget uib_w_21 d-margins btn-lg btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1" id="lasagneback"><i class="glyphicon glyphicon-arrow-left button-icon-left" data-position="left"></i>Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="upage hidden" id="uib_page_1Roast">
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_24" data-uib="layout/header" data-ver="0">
+                    <h2 style="color: white;">Roast Chicken Recipe</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_8_85">
+                    <div class="widget uib_w_23 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/Roast-Chicken1.png" alt="Roast Chicken">
+
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="tarea widget uib_w_25 d-margins" data-uib="media/text" data-ver="0" name="uib_w_25">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h1>Ingredients :&nbsp;</h1>
+
+                            <ul>
+                                <li>1 (3 pound) whole chicken, giblets removed</li>
+                                <li>salt and black pepper to taste</li>
+                                <li>1 tablespoon onion powder, or to taste</li>
+                                <li>1/2 cup margarine, divided</li>
+                                <li>1 stalk celery, leaves removed</li>
+                            </ul>
+
+                            <h2>Instructions - Recipe</h2>
+
+                            <p><strong>1.&nbsp;</strong>Preheat oven to 350 degrees F (175 degrees C).</p>
+
+                            <p><strong>2.&nbsp;</strong>Place chicken in a roasting pan, and season generously inside and out with salt and pepper. Sprinkle inside and out with onion powder. Place 3 tablespoons margarine in the chicken cavity. Arrange dollops
+                                of the remaining margarine around the chicken's exterior. Cut the celery into 3 or 4 pieces, and place in the chicken cavity.</p>
+
+                            <p><strong>3.&nbsp;</strong>Bake uncovered 1 hour and 15 minutes in the preheated oven, to a minimum internal temperature of 180 degrees F (82 degrees C). Remove from heat, and baste with melted margarine and drippings. Cover
+                                with aluminum foil, and allow to rest about 30 minutes before serving.</p>
+
+                            <p><strong>4.&nbsp;</strong>Enjoy</p>
+
+                            <p><strong><em>TIP</em></strong>
+                            </p>
+
+                            <p><em><strong>Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.</strong></em>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn widget uib_w_27 d-margins btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1">I made it!<i class="glyphicon glyphicon-ok button-icon-right" data-position="right"></i>
+                    </button>
+                    <button class="btn widget uib_w_26 d-margins btn-lg btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1" id="backchicken"><i class="glyphicon glyphicon-arrow-left button-icon-left" data-position="left"></i>Back</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
